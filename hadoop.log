@@ -1,0 +1,154 @@
+2014-02-01 08:17:06,803 WARN org.apache.hadoop.util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2014-02-01 08:17:07,230 WARN org.apache.hadoop.conf.Configuration: session.id is deprecated. Instead, use dfs.metrics.session-id
+2014-02-01 08:17:07,235 INFO org.apache.hadoop.metrics.jvm.JvmMetrics: Initializing JVM Metrics with processName=JobTracker, sessionId=
+2014-02-01 08:17:07,297 WARN org.apache.hadoop.mapred.JobClient: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2014-02-01 08:17:07,312 WARN org.apache.hadoop.mapred.JobClient: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2014-02-01 08:17:07,327 INFO org.apache.hadoop.mapreduce.lib.input.FileInputFormat: Total input paths to process : 1
+2014-02-01 08:17:07,895 INFO org.apache.hadoop.mapred.JobClient: Running job: job_local1338052073_0001
+2014-02-01 08:17:07,896 INFO org.apache.hadoop.mapred.LocalJobRunner: OutputCommitter set in config null
+2014-02-01 08:17:07,909 INFO org.apache.hadoop.mapred.LocalJobRunner: OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+2014-02-01 08:17:07,944 INFO org.apache.hadoop.mapred.LocalJobRunner: Waiting for map tasks
+2014-02-01 08:17:07,944 INFO org.apache.hadoop.mapred.LocalJobRunner: Starting task: attempt_local1338052073_0001_m_000000_0
+2014-02-01 08:17:07,973 WARN mapreduce.Counters: Group org.apache.hadoop.mapred.Task$Counter is deprecated. Use org.apache.hadoop.mapreduce.TaskCounter instead
+2014-02-01 08:17:08,017 INFO org.apache.hadoop.util.ProcessTree: setsid exited with exit code 0
+2014-02-01 08:17:08,028 INFO org.apache.hadoop.mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@39697b67
+2014-02-01 08:17:08,030 INFO org.apache.hadoop.mapred.MapTask: Processing split: file:/home/cloudera/workspace/SliceOverlap/input.txt:0+119
+2014-02-01 08:17:08,040 INFO org.apache.hadoop.mapred.MapTask: Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+2014-02-01 08:17:08,045 INFO org.apache.hadoop.mapred.MapTask: io.sort.mb = 100
+2014-02-01 08:17:08,289 INFO org.apache.hadoop.mapred.MapTask: data buffer = 79691776/99614720
+2014-02-01 08:17:08,289 INFO org.apache.hadoop.mapred.MapTask: record buffer = 262144/327680
+2014-02-01 08:17:08,303 INFO org.apache.hadoop.mapred.LocalJobRunner: Map task executor complete.
+2014-02-01 08:17:08,305 WARN org.apache.hadoop.mapred.LocalJobRunner: job_local1338052073_0001
+java.lang.Exception: java.lang.ClassCastException: org.apache.hadoop.io.LongWritable cannot be cast to WritableSliceCombo
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.run(LocalJobRunner.java:406)
+Caused by: java.lang.ClassCastException: org.apache.hadoop.io.LongWritable cannot be cast to WritableSliceCombo
+	at SliceOverlapMapper.map(SliceOverlapMapper.java:1)
+	at org.apache.hadoop.mapreduce.Mapper.run(Mapper.java:140)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:672)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:330)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:268)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:441)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:662)
+2014-02-01 08:17:08,899 INFO org.apache.hadoop.mapred.JobClient:  map 0% reduce 0%
+2014-02-01 08:17:08,901 INFO org.apache.hadoop.mapred.JobClient: Job complete: job_local1338052073_0001
+2014-02-01 08:17:08,903 INFO org.apache.hadoop.mapred.JobClient: Counters: 0
+2014-02-01 08:18:15,052 WARN org.apache.hadoop.util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2014-02-01 08:18:15,545 WARN org.apache.hadoop.conf.Configuration: session.id is deprecated. Instead, use dfs.metrics.session-id
+2014-02-01 08:18:15,549 INFO org.apache.hadoop.metrics.jvm.JvmMetrics: Initializing JVM Metrics with processName=JobTracker, sessionId=
+2014-02-01 08:18:15,630 WARN org.apache.hadoop.mapred.JobClient: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2014-02-01 08:18:15,645 WARN org.apache.hadoop.mapred.JobClient: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2014-02-01 08:18:15,662 INFO org.apache.hadoop.mapred.JobClient: Cleaning up the staging area file:/tmp/hadoop-cloudera/mapred/staging/cloudera1390705316/.staging/job_local1390705316_0001
+2014-02-01 08:18:36,193 ERROR org.apache.hadoop.security.UserGroupInformation: PriviledgedActionException as:cloudera (auth:SIMPLE) cause:org.apache.hadoop.mapred.FileAlreadyExistsException: Output directory output already exists
+2014-02-01 08:18:48,732 WARN org.apache.hadoop.util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2014-02-01 08:18:49,154 WARN org.apache.hadoop.conf.Configuration: session.id is deprecated. Instead, use dfs.metrics.session-id
+2014-02-01 08:18:49,157 INFO org.apache.hadoop.metrics.jvm.JvmMetrics: Initializing JVM Metrics with processName=JobTracker, sessionId=
+2014-02-01 08:18:49,208 WARN org.apache.hadoop.mapred.JobClient: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2014-02-01 08:18:49,222 WARN org.apache.hadoop.mapred.JobClient: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2014-02-01 08:18:49,231 INFO org.apache.hadoop.mapred.JobClient: Cleaning up the staging area file:/tmp/hadoop-cloudera/mapred/staging/cloudera1503604527/.staging/job_local1503604527_0001
+2014-02-01 08:18:49,232 ERROR org.apache.hadoop.security.UserGroupInformation: PriviledgedActionException as:cloudera (auth:SIMPLE) cause:org.apache.hadoop.mapred.FileAlreadyExistsException: Output directory output already exists
+2014-02-01 08:19:41,664 WARN org.apache.hadoop.util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2014-02-01 08:19:42,151 WARN org.apache.hadoop.conf.Configuration: session.id is deprecated. Instead, use dfs.metrics.session-id
+2014-02-01 08:19:42,154 INFO org.apache.hadoop.metrics.jvm.JvmMetrics: Initializing JVM Metrics with processName=JobTracker, sessionId=
+2014-02-01 08:19:42,234 WARN org.apache.hadoop.mapred.JobClient: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2014-02-01 08:19:42,258 WARN org.apache.hadoop.mapred.JobClient: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2014-02-01 08:19:42,286 INFO org.apache.hadoop.mapreduce.lib.input.FileInputFormat: Total input paths to process : 1
+2014-02-01 08:19:42,763 INFO org.apache.hadoop.mapred.JobClient: Running job: job_local582916585_0001
+2014-02-01 08:19:42,769 INFO org.apache.hadoop.mapred.LocalJobRunner: OutputCommitter set in config null
+2014-02-01 08:19:42,777 INFO org.apache.hadoop.mapred.LocalJobRunner: OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+2014-02-01 08:19:42,796 INFO org.apache.hadoop.mapred.LocalJobRunner: Waiting for map tasks
+2014-02-01 08:19:42,799 INFO org.apache.hadoop.mapred.LocalJobRunner: Starting task: attempt_local582916585_0001_m_000000_0
+2014-02-01 08:19:42,827 WARN mapreduce.Counters: Group org.apache.hadoop.mapred.Task$Counter is deprecated. Use org.apache.hadoop.mapreduce.TaskCounter instead
+2014-02-01 08:19:42,856 INFO org.apache.hadoop.util.ProcessTree: setsid exited with exit code 0
+2014-02-01 08:19:42,875 INFO org.apache.hadoop.mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@47e9d9b1
+2014-02-01 08:19:42,887 INFO org.apache.hadoop.mapred.MapTask: Processing split: file:/home/cloudera/workspace/SliceOverlap/input.txt:0+119
+2014-02-01 08:19:42,895 INFO org.apache.hadoop.mapred.MapTask: Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+2014-02-01 08:19:42,898 INFO org.apache.hadoop.mapred.MapTask: io.sort.mb = 100
+2014-02-01 08:19:42,951 INFO org.apache.hadoop.mapred.MapTask: data buffer = 79691776/99614720
+2014-02-01 08:19:42,951 INFO org.apache.hadoop.mapred.MapTask: record buffer = 262144/327680
+2014-02-01 08:19:42,964 INFO org.apache.hadoop.mapred.LocalJobRunner: Map task executor complete.
+2014-02-01 08:19:42,965 WARN org.apache.hadoop.mapred.LocalJobRunner: job_local582916585_0001
+java.lang.Exception: java.lang.ClassCastException: org.apache.hadoop.io.LongWritable cannot be cast to WritableSliceCombo
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.run(LocalJobRunner.java:406)
+Caused by: java.lang.ClassCastException: org.apache.hadoop.io.LongWritable cannot be cast to WritableSliceCombo
+	at SliceOverlapMapper.map(SliceOverlapMapper.java:1)
+	at org.apache.hadoop.mapreduce.Mapper.run(Mapper.java:140)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:672)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:330)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:268)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:441)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:662)
+2014-02-01 08:19:43,770 INFO org.apache.hadoop.mapred.JobClient:  map 0% reduce 0%
+2014-02-01 08:19:43,771 INFO org.apache.hadoop.mapred.JobClient: Job complete: job_local582916585_0001
+2014-02-01 08:19:43,779 INFO org.apache.hadoop.mapred.JobClient: Counters: 0
+2014-02-01 08:20:37,388 WARN org.apache.hadoop.util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2014-02-01 08:20:37,878 WARN org.apache.hadoop.conf.Configuration: session.id is deprecated. Instead, use dfs.metrics.session-id
+2014-02-01 08:20:37,884 INFO org.apache.hadoop.metrics.jvm.JvmMetrics: Initializing JVM Metrics with processName=JobTracker, sessionId=
+2014-02-01 08:20:37,942 WARN org.apache.hadoop.mapred.JobClient: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2014-02-01 08:20:37,951 WARN org.apache.hadoop.mapred.JobClient: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2014-02-01 08:20:37,965 INFO org.apache.hadoop.mapreduce.lib.input.FileInputFormat: Total input paths to process : 1
+2014-02-01 08:20:38,541 INFO org.apache.hadoop.mapred.JobClient: Running job: job_local2040260045_0001
+2014-02-01 08:20:38,542 INFO org.apache.hadoop.mapred.LocalJobRunner: OutputCommitter set in config null
+2014-02-01 08:20:38,551 INFO org.apache.hadoop.mapred.LocalJobRunner: OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+2014-02-01 08:20:38,580 INFO org.apache.hadoop.mapred.LocalJobRunner: Waiting for map tasks
+2014-02-01 08:20:38,581 INFO org.apache.hadoop.mapred.LocalJobRunner: Starting task: attempt_local2040260045_0001_m_000000_0
+2014-02-01 08:20:38,610 WARN mapreduce.Counters: Group org.apache.hadoop.mapred.Task$Counter is deprecated. Use org.apache.hadoop.mapreduce.TaskCounter instead
+2014-02-01 08:20:38,650 INFO org.apache.hadoop.util.ProcessTree: setsid exited with exit code 0
+2014-02-01 08:20:38,660 INFO org.apache.hadoop.mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@3c24c4a3
+2014-02-01 08:20:38,665 INFO org.apache.hadoop.mapred.MapTask: Processing split: file:/home/cloudera/workspace/SliceOverlap/input.txt:0+119
+2014-02-01 08:20:38,675 INFO org.apache.hadoop.mapred.MapTask: Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+2014-02-01 08:20:38,677 INFO org.apache.hadoop.mapred.MapTask: io.sort.mb = 100
+2014-02-01 08:20:38,762 INFO org.apache.hadoop.mapred.MapTask: data buffer = 79691776/99614720
+2014-02-01 08:20:38,765 INFO org.apache.hadoop.mapred.MapTask: record buffer = 262144/327680
+2014-02-01 08:20:38,801 INFO org.apache.hadoop.mapred.LocalJobRunner: 
+2014-02-01 08:20:38,801 INFO org.apache.hadoop.mapred.MapTask: Starting flush of map output
+2014-02-01 08:20:38,820 INFO org.apache.hadoop.mapred.MapTask: Finished spill 0
+2014-02-01 08:20:38,824 INFO org.apache.hadoop.mapred.Task: Task:attempt_local2040260045_0001_m_000000_0 is done. And is in the process of commiting
+2014-02-01 08:20:38,830 INFO org.apache.hadoop.mapred.LocalJobRunner: 
+2014-02-01 08:20:38,830 INFO org.apache.hadoop.mapred.Task: Task 'attempt_local2040260045_0001_m_000000_0' done.
+2014-02-01 08:20:38,832 INFO org.apache.hadoop.mapred.LocalJobRunner: Finishing task: attempt_local2040260045_0001_m_000000_0
+2014-02-01 08:20:38,833 INFO org.apache.hadoop.mapred.LocalJobRunner: Map task executor complete.
+2014-02-01 08:20:38,835 WARN mapreduce.Counters: Group org.apache.hadoop.mapred.Task$Counter is deprecated. Use org.apache.hadoop.mapreduce.TaskCounter instead
+2014-02-01 08:20:38,841 INFO org.apache.hadoop.mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@7bd6747b
+2014-02-01 08:20:38,841 INFO org.apache.hadoop.mapred.LocalJobRunner: 
+2014-02-01 08:20:38,845 INFO org.apache.hadoop.mapred.Merger: Merging 1 sorted segments
+2014-02-01 08:20:38,874 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 1 segments left of total size: 62 bytes
+2014-02-01 08:20:38,876 INFO org.apache.hadoop.mapred.LocalJobRunner: 
+2014-02-01 08:20:38,899 INFO org.apache.hadoop.mapred.Task: Task:attempt_local2040260045_0001_r_000000_0 is done. And is in the process of commiting
+2014-02-01 08:20:38,899 INFO org.apache.hadoop.mapred.LocalJobRunner: 
+2014-02-01 08:20:38,899 INFO org.apache.hadoop.mapred.Task: Task attempt_local2040260045_0001_r_000000_0 is allowed to commit now
+2014-02-01 08:20:38,900 INFO org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter: Saved output of task 'attempt_local2040260045_0001_r_000000_0' to output
+2014-02-01 08:20:38,900 INFO org.apache.hadoop.mapred.LocalJobRunner: reduce > reduce
+2014-02-01 08:20:38,900 INFO org.apache.hadoop.mapred.Task: Task 'attempt_local2040260045_0001_r_000000_0' done.
+2014-02-01 08:20:39,544 INFO org.apache.hadoop.mapred.JobClient:  map 100% reduce 100%
+2014-02-01 08:20:39,546 INFO org.apache.hadoop.mapred.JobClient: Job complete: job_local2040260045_0001
+2014-02-01 08:20:39,556 INFO org.apache.hadoop.mapred.JobClient: Counters: 20
+2014-02-01 08:20:39,557 INFO org.apache.hadoop.mapred.JobClient:   File System Counters
+2014-02-01 08:20:39,557 INFO org.apache.hadoop.mapred.JobClient:     FILE: Number of bytes read=646
+2014-02-01 08:20:39,558 INFO org.apache.hadoop.mapred.JobClient:     FILE: Number of bytes written=186340
+2014-02-01 08:20:39,558 INFO org.apache.hadoop.mapred.JobClient:     FILE: Number of read operations=0
+2014-02-01 08:20:39,558 INFO org.apache.hadoop.mapred.JobClient:     FILE: Number of large read operations=0
+2014-02-01 08:20:39,558 INFO org.apache.hadoop.mapred.JobClient:     FILE: Number of write operations=0
+2014-02-01 08:20:39,558 INFO org.apache.hadoop.mapred.JobClient:   Map-Reduce Framework
+2014-02-01 08:20:39,558 INFO org.apache.hadoop.mapred.JobClient:     Map input records=2
+2014-02-01 08:20:39,558 INFO org.apache.hadoop.mapred.JobClient:     Map output records=6
+2014-02-01 08:20:39,558 INFO org.apache.hadoop.mapred.JobClient:     Map output bytes=48
+2014-02-01 08:20:39,558 INFO org.apache.hadoop.mapred.JobClient:     Input split bytes=117
+2014-02-01 08:20:39,558 INFO org.apache.hadoop.mapred.JobClient:     Combine input records=0
+2014-02-01 08:20:39,559 INFO org.apache.hadoop.mapred.JobClient:     Combine output records=0
+2014-02-01 08:20:39,559 INFO org.apache.hadoop.mapred.JobClient:     Reduce input groups=3
+2014-02-01 08:20:39,559 INFO org.apache.hadoop.mapred.JobClient:     Reduce shuffle bytes=0
+2014-02-01 08:20:39,559 INFO org.apache.hadoop.mapred.JobClient:     Reduce input records=6
+2014-02-01 08:20:39,559 INFO org.apache.hadoop.mapred.JobClient:     Reduce output records=3
+2014-02-01 08:20:39,559 INFO org.apache.hadoop.mapred.JobClient:     Spilled Records=12
+2014-02-01 08:20:39,559 INFO org.apache.hadoop.mapred.JobClient:     CPU time spent (ms)=0
+2014-02-01 08:20:39,559 INFO org.apache.hadoop.mapred.JobClient:     Physical memory (bytes) snapshot=0
+2014-02-01 08:20:39,559 INFO org.apache.hadoop.mapred.JobClient:     Virtual memory (bytes) snapshot=0
+2014-02-01 08:20:39,559 INFO org.apache.hadoop.mapred.JobClient:     Total committed heap usage (bytes)=320741376
