@@ -25,7 +25,7 @@ public class SliceOverlapMapper extends Mapper<LongWritable, Text, Text, IntWrit
 	    	  for (int j=i+1; j < slices.size() - 1; j++){
 	    		  //WritableSliceCombo innerK =  new WritableSliceCombo(slices.get(i),slices.get(j));
 	    		  //hash.addTo(innerK, 1);
-	    		  context.write(new Text(slices.get(i).toString() + "," + slices.get(j).toString()), new IntWritable(1));
+	    		  context.write(new Text(slices.get(i).toString() + "\t" + slices.get(j).toString()), new IntWritable(1));
 	    	  }
 	      };
 	      /*ObjectIterator<Entry<WritableSliceCombo, Integer>> it = hash.entrySet().iterator();

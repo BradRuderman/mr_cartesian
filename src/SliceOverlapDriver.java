@@ -31,6 +31,7 @@ public class SliceOverlapDriver extends Configured implements Tool {
 
 		job.setMapperClass(SliceOverlapMapper.class);
 		job.setReducerClass(SliceOverlapTotalReducer.class);
+		job.setCombinerClass(SliceOverlapTotalReducer.class);
 
 		job.setMapOutputKeyClass(Text.class);
 		job.setMapOutputValueClass(IntWritable.class);
